@@ -7,13 +7,6 @@
   min-height: 100vh;
 }
 
-.img {
-  position: absolute;
-  opacity: 40%;
-  top: -30%;
-  left: 5%;
-}
-
 .description {
   display: inherit;
   justify-content: inherit;
@@ -42,7 +35,6 @@
 .main p {
   margin-left: 42%;
   margin-right: 1rem;
-  z-index: 3;
 }
 
 .description span {
