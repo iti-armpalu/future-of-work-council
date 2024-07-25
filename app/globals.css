@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,700;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,700;1,700&display=swap");
 
 :root {
   --max-width: 1100px;
@@ -12,20 +11,7 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --background-main: #360D1B;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  --background-main: #360d1b;
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
@@ -78,49 +64,224 @@
   }
 }
 
+/* ------------------------- Body -------------------------------------------------- */
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* border: 1px solid green; */
 }
 
 html,
 body {
   max-width: 100vw;
+  height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+}
+
+html {
+  font-weight: 200;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-    background-color: var(--background-main);
+  font-family: "Raleway", sans-serif !important;
+  color: rgb(var(--foreground-rgb)) !important;
+  background: var(--background-main) !important;
+  font-size: 16px;
+  line-height: 100%;
 }
 
-h1, p {
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-h1 {
-  font-style: normal;
-  font-size: 2.6rem;
-  width: 85%;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
+  outline: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 button {
   color: #fff;
-  background-color: #EF6E4E;
+  background-color: #ef6e4e;
+  text-transform: uppercase !important;
+  border: none;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.86rem;
+  line-height: 0.86rem;
+  padding: 1rem;
+  min-width: fit-content;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+input::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* Removes the browser default styling  */
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+p {
+  padding: 0;
+}
+
+h6 {
+  font-weight: 700;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #141414;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #141414;
+  text-shadow: none;
+}
+
+section {
+  position: relative;
+  min-width: 360px;
+}
+
+.fullheight {
+  position: relative;
+  /* height: auto; */
+  height: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  /* .fullheight {
+    height: 100%;
+  } */
+}
+
+.fullheight-mobile {
+  position: relative;
+  height: 100%;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 360px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+
+
+h1 {
+  font-style: normal;
+  font-size: 2.6rem;
+}
+
+/* p {
+  padding-bottom: 1rem;
+} */
+
+
+
+/* button {
+  color: #fff;
+  background-color: #ef6e4e;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -129,21 +290,9 @@ button {
   padding: 1rem;
   border: none;
   min-width: fit-content;
-}
+} */
 
-svg {
-  fill: #7C2929;
-}
-
-.border-top {
-  border-top: 1px solid #7C2929;
-}
-
-.border-right {
-  border-right: 1px solid #7C2929;
-}
-
-.header {
+/* .header {
   min-width: 13rem;
   max-width: 13rem;
   display: flex;
@@ -152,9 +301,10 @@ svg {
   align-items: baseline;
   padding: 30% 2rem;
   height: 100%;
-}
 
-.logo {
+} */
+
+/* .logo {
   font-size: 1.2rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -163,11 +313,11 @@ svg {
   justify-content: center;
   align-items: flex-start;
   width: 70%;
-}
+} */
 
-.logo a {
+/* .logo a {
   text-decoration: none;
-}
+} */
 /* 
 .navigation ul {
   list-style: none;
@@ -192,28 +342,25 @@ svg {
   font-weight: 700;
 } */
 
-.flex {
-  display: flex;
-}
-
+/* 
 .flex-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
-.social {
+/* .social {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
+
   font-size: 0.86rem;
   padding: 30% 0;
-}
+} */
 
-.social a {
+/* .social a {
   width: 5rem;
   height: 5rem;
   line-height: 5rem;
@@ -225,10 +372,17 @@ svg {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* .img {
+  position: absolute;
+  opacity: 40%;
+  top: -30%;
+  left: 5%;
+} */
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */

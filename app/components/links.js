@@ -14,6 +14,7 @@ export function Links() {
           <Link
             className={`${pathname === "/about" ? `${styles.active}` : ""}`}
             href="/about"
+            prefetch={false}
           >
             About the Council
           </Link>
@@ -22,6 +23,7 @@ export function Links() {
           <Link 
             className={`${pathname === "/activities" ? `${styles.active}` : ""}`} 
             href="/activities"
+            prefetch={false}
           >
             Council Activities
           </Link>
@@ -30,6 +32,7 @@ export function Links() {
           <Link 
             className={`${pathname === "/partners" ? `${styles.active}` : ""}`} 
             href="/partners"
+            prefetch={false}
           >
             Partners
           </Link>
@@ -38,6 +41,7 @@ export function Links() {
           <Link 
             className={`${pathname === "/reports" ? `${styles.active}` : ""}`} 
             href="/reports"
+            prefetch={false}
           >
             Reports & Insights
           </Link>
@@ -46,6 +50,7 @@ export function Links() {
           <Link 
             className={`${pathname === "/contact" ? `${styles.active}` : ""}`} 
             href="/contact"
+            prefetch={false}
           >
             Contact
           </Link>
