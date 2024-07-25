@@ -11,7 +11,7 @@
 .img {
   position: absolute;
   opacity: 40%;
-  top: -30%;
+  top: -10%;
   left: 5%;
 }
 
@@ -137,6 +137,10 @@
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 2rem;
+  }
+
+  .img {
+display: none;
   }
 }
 
