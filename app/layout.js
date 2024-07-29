@@ -8,6 +8,9 @@ import "./globals.css";
 import Link from "next/link";
 import { Links } from "./components/links";
 import { Header } from "./components/header";
+import { HeaderMobile } from "./components/header-mobile";
+
+
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +35,9 @@ export default function RootLayout({ children }) {
  */}
 
         <div className="row g-0 h-100">
+          <div className="col-12 d-md-none">
+            <HeaderMobile />
+          </div>
           <div className="d-none col-md-3 d-md-flex">
             <Header />
           </div>

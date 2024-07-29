@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding: 4rem 6rem 0 6rem;
   margin-left: -15%;
   min-height: 100vh;
@@ -238,37 +238,15 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-  .main {
-    padding: 5rem 2rem 3rem;
-    min-height: calc(100vh - 90px);
-    margin-left: 0;
-  }
+
+    .main {
+      padding: 2rem 2rem 3rem;
+      min-height: calc(100vh - 96px);
+      margin-left: 0;
+    }
+
 
 
 }
 
-@media (max-width: 576px) {
 
-  .activity {
-    width: 100%;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}

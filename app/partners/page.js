@@ -1,13 +1,16 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
+import { PageTitle } from "../components/page-title";
 
 export default function Page() {
+
+  const title = "Partners";
+  const paragraphs = [
+    ""
+  ];
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Partners</h1>
-      </div>
-
+      <PageTitle title={title} paragraphs={paragraphs} />
       <div className="row g-0 h-100 w-100">
         <div className="col-12 col-xl-7">
           <div className={styles.partners}>

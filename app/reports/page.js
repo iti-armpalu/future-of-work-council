@@ -1,33 +1,19 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import Link from "next/link";
+import { PageTitle } from "../components/page-title";
 
 export default function Page() {
+
+  const title = "Reports & Insights";
+  const paragraphs = [
+    " This dedicated space is designed to provide you with valuable resources and information to shed light on the evolving landscape of work. Explore the latest trends, challenges, and opportunities shaping the future of work.",
+    "Whether you are a business leader, policymaker, academic, or simply interested in the future of work, our reports and insights offer the knowledge and perspectives you need to navigate andthrive in a rapidly changing world."
+  ];
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <div className="row g-0 h-100 w-100 align-items-center">
-          <div className="col-12 col-xl-3">
-            <h1>Reports & Insights</h1>
-          </div>
-
-          <div className="col-12 col-xl-9">
-            <p>
-              This dedicated space is designed to provide you with valuable
-              resources and information to shed light on the evolving landscape
-              of work. Explore the latest trends, challenges, and opportunities
-              shaping the future of work.
-            </p>
-            <p>
-              Whether you are a business leader, policymaker, academic, or
-              simply interested in the future of work, our reports and insights
-              offer the knowledge and perspectives you need to navigate and
-              thrive in a rapidly changing world.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <PageTitle title={title} paragraphs={paragraphs} />
       <div>
         <div className="mb-5">
           <h4>Reports</h4>

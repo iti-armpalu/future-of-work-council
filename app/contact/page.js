@@ -1,25 +1,23 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
+import { PageTitle } from "../components/page-title";
 
 export default function Page() {
+  const title = "Contact";
+  const paragraphs = [
+    "Whether you have questions, feedback, or are interested in collaborating with the Future of Work Council, please dont hesitate to reach out.",
+    "Fill out the form below or use the provided contact information to get in touch with us.",
+  ];
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Contact</h1>
-        <div>
-          <p>
-            Whether you have questions, feedback, or are interested in
-            collaborating with the Future of Work Council, please dont hesitate
-            to reach out. Fill out the form below or use the provided contact
-            information to get in touch with us.
-          </p>
-        </div>
-      </div>
-
+      <PageTitle title={title} paragraphs={paragraphs} />
       <div className={styles.section}>
         <div className={styles.form}>
           <form>
-            <p><b>Hello, the Future of Work Council,</b></p>
+            <p>
+              <b>Hello, the Future of Work Council</b>
+            </p>
 
             <p>
               My name is

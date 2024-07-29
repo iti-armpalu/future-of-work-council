@@ -1,0 +1,66 @@
+/* Page title styles */
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  margin: 2.75rem 0;
+}
+
+.title h1 {
+  font-weight: 700;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards 0.1s;
+}
+
+.title p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.title p:not(:last-child) {
+  margin-bottom: 1rem !important;
+}
+
+.title span {
+  font-weight: 700;
+  color: #ef6e4e;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .title h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+}

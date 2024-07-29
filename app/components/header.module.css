@@ -27,8 +27,13 @@
 
 .logo a {
   line-height: 1.15;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards 0.1s;
+  animation-delay: 0.2s; /* Adjust delay for the first link */
 }
 
+/* Social Links Container */
 .social {
   display: flex;
   flex-direction: column;
@@ -51,55 +56,32 @@
   border-color: rgb(var(--foreground-rgb));
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
 }
 
-/* Mobile */
-/* @media (max-width: 768px) {
-  .header {
-    position: relative;
-
-
-    display: flex;
-    flex-direction: row;
-    border-right: none;
-    min-width: 100%
-  }
-
-  .top {
-    display: flex;
-    flex-direction: row;
-    padding: 2rem 2rem 0;
-  }
-
-  .logo {
-    margin-bottom: 0;
-    width: 45%;
-  }
-
-  .social {
-    display: none;
-  }
-} */
-
-
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+/* Animation Delays for Each Link */
+.social a:nth-child(1) {
+  animation-delay: 0.2s; /* Adjust delay for the first link */
 }
 
-@keyframes rotate {
+.social a:nth-child(2) {
+  animation-delay: 0.4s; /* Adjust delay for the second link */
+}
+
+.social a:nth-child(2) {
+  animation-delay: 0.6s; /* Adjust delay for the second link */
+}
+
+@keyframes fadeInUp {
   from {
-    transform: rotate(360deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(0deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

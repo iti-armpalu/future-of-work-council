@@ -6,13 +6,13 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className={styles.main}>
-      <Image
+      {/* <Image
         src="./images/GT_ABSTRACT_FORM-40.svg"
         width={1350}
         height={1350}
         alt=""
         className={styles.img}
-      />
+      /> */}
 
       <div className={styles.description}>
         <h1>

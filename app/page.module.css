@@ -8,9 +8,10 @@
   min-height: 100vh;
 }
 
+/* Image Styles */
 .img {
   position: absolute;
-  opacity: 40%;
+  opacity: 0.4;
   top: -10%;
   left: 5%;
 }
@@ -26,9 +27,11 @@
 
 .description h1 {
   position: relative;
-  margin: 0;
-  margin-top: 4rem;
+  margin: 4rem 0 0;
   width: 85%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards 0.3s; /* Animation for h1 */
 }
 
 .description span {
@@ -36,16 +39,37 @@
   color: #EF6E4E;
 }
 
+/* Paragraph Styles within Main */
 .main p {
-  margin-left: 42%;
-  margin-right: 1rem;
+  margin: 0 1rem 0 42%;
   z-index: 3;
-  padding-bottom: 0;
-  margin-bottom: 0;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards 0.5s; /* Animation for p */
 }
 
+/* Button Styles */
 .btn {
+  color: #fff;
+  background-color: #ef6e4e;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+  padding: 1rem;
+  max-width: fit-content;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards 0.7s; /* Animation for btn */
+}
+
+/* .btn {
   color: #fff;
   background-color: #ef6e4e;
   text-transform: uppercase;
@@ -65,42 +89,49 @@
   -o-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-}
+} */
 
 
 /* Enable hover only on non-touch devices */
+/* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
+  .btn:hover {
+    background: rgba(239, 110, 78, 0.8); /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight zoom effect */
   }
 }
 
 @media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
+  .btn:hover {
+    transform: none; /* Disable transform for users with reduced motion preferences */
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 
 
 
+/* Media Queries */
 
-@media (min-width: 1200px) and (max-width: 1399px) {
-
-
+@media (max-width: 1399px) {
   .main p {
     margin-left: 30%;
   }
 }
 
-
 /* Larger Desktop */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .main {
     padding: 5rem;
     margin-left: -10%;
@@ -108,17 +139,12 @@
 
   .description h1 {
     font-size: 2.5rem;
-    width: 100%;
   }
 
   .main p {
     margin-left: 0;
   }
 }
-
-
-
-
 
 
 /* Tablet and Smaller Desktop */
@@ -130,26 +156,23 @@
 
   .description h1 {
     font-size: 2rem;
-    width: 100%;
   }
 
   .main p {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     padding-bottom: 2rem;
   }
 
   .img {
-display: none;
+    display: none;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-
   .main {
-    padding: 5rem 2rem 3rem;
-    min-height: calc(100vh - 90px);
+    padding: 2rem 2rem 3rem;
+    min-height: calc(100vh - 107.2px);
     margin-left: 0;
   }
 
@@ -159,31 +182,14 @@ display: none;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
+@media (max-width: 575px) {
+  .main {
+    padding: 2rem 2rem 3rem;
+    min-height: calc(100vh - 107.2px);
+    margin-left: 0;
   }
 
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+  .description h1 {
+    margin: 2rem 0 0;
   }
 }
