@@ -1,6 +1,6 @@
-import Image from "next/image";
 import styles from "./styles.module.css";
 import { PageTitle } from "../components/page-title";
+import { Button } from "../components/ui/button";
 
 export default function Page() {
   const title = "Contact";
@@ -54,7 +54,9 @@ export default function Page() {
                 name="message"
               />
             </p>
-            <button className={styles.btn}>Send</button>
+            <Button variant="primary">
+              Send
+            </Button>
           </form>
         </div>
       </div>

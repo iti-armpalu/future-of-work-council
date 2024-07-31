@@ -16,10 +16,11 @@ const itemVariants = {
 };
 
 export function HeaderMobileMenu(props) {
+  const { isOpen, onClick } = props;
 
   const pathname = usePathname();
 
-  const { isOpen, onClick } = props;
+  const links = ["about", "activities", "partners", "reports", "contact"];
 
   return (
     <motion.ul
@@ -47,59 +48,21 @@ export function HeaderMobileMenu(props) {
         },
       }}
       style={{
-        pointerEvents: isOpen ? "auto" : "none"
+        pointerEvents: isOpen ? "auto" : "none",
       }}
     >
-      <motion.li variants={itemVariants}>
-        <Link
-          className={`${pathname === "/about" ? `${styles.active}` : ""}`}
-          href="/about"
-          prefetch={false}
-          onClick={onClick}
-        >
-          About the Council
-        </Link>
-      </motion.li>
-      <motion.li variants={itemVariants}>
-        <Link
-          className={`${pathname === "/activities" ? `${styles.active}` : ""}`}
-          href="/activities"
-          prefetch={false}
-          onClick={onClick}
-        >
-          Council Activities
-        </Link>
-      </motion.li>
-      <motion.li variants={itemVariants}>
-        <Link
-          className={`${pathname === "/partners" ? `${styles.active}` : ""}`}
-          href="/partners"
-          prefetch={false}
-          onClick={onClick}
-        >
-          Partners
-        </Link>
-      </motion.li>
-      <motion.li variants={itemVariants}>
-        <Link
-          className={`${pathname === "/reports" ? `${styles.active}` : ""}`}
-          href="/reports"
-          prefetch={false}
-          onClick={onClick}
-        >
-          Reports & Insights
-        </Link>
-      </motion.li>
-      <motion.li variants={itemVariants}>
-        <Link
-          className={`${pathname === "/contact" ? `${styles.active}` : ""}`}
-          href="/contact"
-          prefetch={false}
-          onClick={onClick}
-        >
-          Contact
-        </Link>
-      </motion.li>
+      {links.map((path, index) => (
+        <motion.li key={path} variants={itemVariants}>
+          <Link
+            className={pathname === `/${path}` ? styles.active : ""}
+            href={`/${path}`}
+            prefetch={false}
+            onClick={onClick}
+          >
+            {path.charAt(0).toUpperCase() + path.slice(1).replace("-", " ")}
+          </Link>
+        </motion.li>
+      ))}
     </motion.ul>
   );
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;    
+  padding: 6rem;
   margin-left: -15%;
   min-height: 100vh;
 }
@@ -16,7 +16,7 @@
   left: 5%;
 }
 
-.description {
+.hero {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -25,18 +25,20 @@
   z-index: 2;
 }
 
-.description h1 {
+.hero h1 {
   position: relative;
   margin: 4rem 0 0;
   width: 85%;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards 0.3s; /* Animation for h1 */
+  &:global {
+    animation: fadeInUp 0.6s forwards 0.3s;
+  }
 }
 
-.description span {
+.hero span {
   font-weight: 700;
-  color: #EF6E4E;
+  color: #ef6e4e;
 }
 
 /* Paragraph Styles within Main */
@@ -46,81 +48,10 @@
   line-height: 1.2;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards 0.5s; /* Animation for p */
-}
-
-/* Button Styles */
-.btn {
-  color: #fff;
-  background-color: #ef6e4e;
-  text-transform: uppercase;
-  font-size: 0.86rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  border: none;
-  border-radius: 0;
-  padding: 1rem;
-  max-width: fit-content;
-  white-space: nowrap;
-  text-align: center;
-  transition: all 0.6s ease-in-out;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards 0.7s; /* Animation for btn */
-}
-
-/* .btn {
-  color: #fff;
-  background-color: #ef6e4e;
-  text-transform: uppercase;
-  font-size: 0.86rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  padding: 1rem;
-  max-width: fit-content;
-  white-space: nowrap;
-   text-align: center;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
-} */
-
-
-/* Enable hover only on non-touch devices */
-/* Hover Effects */
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover {
-    background: rgba(239, 110, 78, 0.8); /* Slightly lighter on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+  &:global {
+    animation: fadeInUp 0.6s forwards 0.5s; /* Animation for p */
   }
 }
-
-@media (prefers-reduced-motion) {
-  .btn:hover {
-    transform: none; /* Disable transform for users with reduced motion preferences */
-  }
-}
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
 
 /* Media Queries */
 
@@ -137,7 +68,7 @@
     margin-left: -10%;
   }
 
-  .description h1 {
+  .hero h1 {
     font-size: 2.5rem;
   }
 
@@ -146,7 +77,6 @@
   }
 }
 
-
 /* Tablet and Smaller Desktop */
 @media (max-width: 991px) {
   .main {
@@ -154,7 +84,7 @@
     margin-left: -5%;
   }
 
-  .description h1 {
+  .hero h1 {
     font-size: 2rem;
   }
 
@@ -176,20 +106,14 @@
     margin-left: 0;
   }
 
-  .description h1 {
+  .hero h1 {
     font-size: 1.5rem;
     width: 100%;
   }
 }
 
 @media (max-width: 575px) {
-  .main {
-    padding: 2rem 2rem 3rem;
-    min-height: calc(100vh - 107.2px);
-    margin-left: 0;
-  }
-
-  .description h1 {
+  .hero h1 {
     margin: 2rem 0 0;
   }
 }

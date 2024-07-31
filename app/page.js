@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./globals.css";
 import styles from "./page.module.css";
-import Link from "next/link";
+import { Button } from "./components/ui/button";
 
 export default function Page() {
   return (
@@ -14,7 +14,7 @@ export default function Page() {
         className={styles.img}
       /> */}
 
-      <div className={styles.description}>
+      <div className={styles.hero}>
         <h1>
           <span>The Future of Work Council</span> specializes in the strategic
           application of AI to enhance business practices and optimize workforce
@@ -27,13 +27,7 @@ export default function Page() {
           committed to collaborating with us in shaping the future of work
           through innovative solutions and insights.
         </p>
-        <Link 
-          className={`btn ${styles.btn}`}
-          href="/partners"
-          prefetch={false}
-        >
-          Our partners
-        </Link>
+        <Button link="/partners">Our partners</Button>
       </div>
     </main>
   );

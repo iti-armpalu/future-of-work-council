@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 4rem 6rem 0 6rem;
+  /* padding: 6rem; */
   margin-left: -15%;
   min-height: 100vh;
   line-height: 1.15;
@@ -15,7 +16,7 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .section > div {
@@ -44,10 +45,9 @@
 
 .profile {
   position: relative;
-  padding: 2rem 2rem 0;
+  padding: 1rem 2rem 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
   width: 31%;
   opacity: 0;
   transform: translateY(20px);
@@ -128,6 +128,7 @@
 
   .profile {
     width: 48%;
+    margin-bottom: 1.5rem;
     animation-delay: 0.2s; /* Adjust delay */
   }
 }

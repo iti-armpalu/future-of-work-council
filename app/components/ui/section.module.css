@@ -1,0 +1,20 @@
+.section {
+  display: inherit;
+  justify-content: inherit;
+  align-items: flex-start;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  margin: 2rem 0;
+}
+
+.section h4 {
+  font-weight: 700;
+  color: #ef6e4e;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+    &:global {
+      animation: fadeInUp 0.5s forwards;
+    }
+}

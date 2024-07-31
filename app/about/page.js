@@ -33,10 +33,10 @@ export default function Page() {
     <main className={styles.main}>
       <PageTitle title={title} paragraphs={paragraphs} highlight={highlight} />
       <section className={`row g-0 h-100 w-100 ${styles.section}`}>
-        <div className="col-md-1">
+        <div className="col-12 col-md-1">
           <h4>Founders</h4>
         </div>
-        <div className={`col-md-11 ${styles.profiles}`}>
+        <div className={`col-12 col-md-11 ${styles.profiles}`}>
           {founders.map((founder, index) => (
             <div key={index} className={styles.profile}>
               <h6>{founder.name}</h6>

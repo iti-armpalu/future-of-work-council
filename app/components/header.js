@@ -13,7 +13,9 @@ export function Header() {
             The Future of Work Council
           </Link>
         </div>
+        <nav className={styles.navigation}>
         <Links />
+        </nav>
       </div>
       <div className={styles.social}>
         <Link href="/" prefetch={false}>

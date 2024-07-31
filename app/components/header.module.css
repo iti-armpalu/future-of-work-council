@@ -33,6 +33,11 @@
   animation-delay: 0.2s; /* Adjust delay for the first link */
 }
 
+.navigation {
+  z-index: 1;
+  margin: auto 0;
+}
+
 /* Social Links Container */
 .social {
   display: flex;

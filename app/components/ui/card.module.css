@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #7c2929;
+  width: 30%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  &:global {
+    animation: fadeInUp 0.5s forwards;
+  }
+}
+
+.card p,
+.card a {
+  opacity: 0;
+  transform: translateY(20px);
+  &:global {
+    animation: fadeInUp 0.5s forwards;
+  }
+}
+
+.card p {
+  margin-bottom: 1rem !important;
+  animation-delay: 0.3s;
+}
+
+.card a {
+  width: fit-content;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #ef6e4e;
+  animation-delay: 0.5s;
+  transition: color 0.3s ease, font-weight 0.3s ease, border-bottom-width 0.3s ease;
+}
+
+.card a:hover {
+  color: #ef6e4e;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .card {
+    width: 46%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+    margin-right: 0;
+  }
+}

@@ -7,6 +7,24 @@
   line-height: 1.15;
 }
 
+.header nav {
+  position: relative;
+  width: 100%; /* or any specific width you prefer */
+  max-width: 200px; /* if you want a max-width */
+  height: 100%;
+}
+
+/* .menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-100%);
+  opacity: 1;
+}
+
+.menu.open {
+  transform: translateY(0);
+  opacity: 1;
+} */
+
 .logo {
   font-size: 1rem;
   font-weight: 700;

@@ -16,13 +16,17 @@
   margin-bottom: 0;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards 0.1s;
+  &:global {
+    animation: fadeInUp 0.5s forwards 0.1s;
+  }
 }
 
 .title p {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
+  &:global {
+    animation: fadeInUp 0.5s forwards;
+  }
 }
 
 .title p:not(:last-child) {
@@ -32,18 +36,6 @@
 .title span {
   font-weight: 700;
   color: #ef6e4e;
-}
-
-/* Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Responsive Styles */

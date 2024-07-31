@@ -1,20 +1,27 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import { PageTitle } from "../components/page-title";
+import { Button } from "../components/ui/button";
 
 export default function Page() {
-
   const title = "Partners";
-  const paragraphs = [
-    ""
+
+  const imageSources = [
+    "/images/airbnb-2-logo-svgrepo-com.svg",
+    "/images/microsoft-logo-svgrepo-com.svg",
+    "/images/visa-logo-svgrepo-com.svg",
+    "/images/spotify-1-logo-svgrepo-com.svg",
+    "/images/airbnb-2-logo-svgrepo-com.svg",
+    "/images/microsoft-logo-svgrepo-com.svg",
   ];
+
   return (
     <main className={styles.main}>
-      <PageTitle title={title} paragraphs={paragraphs} />
+      <PageTitle title={title} />
       <div className="row g-0 h-100 w-100">
         <div className="col-12 col-xl-7">
           <div className={styles.partners}>
-            <div>
+            <div className={styles.intro}>
               <p>
                 Partnerships are at the heart of our mission at the Future of
                 Work Council. We believe that collaborating with leading
@@ -42,120 +49,34 @@ export default function Page() {
                 the way we work, live, and thrive in the digital age.
               </p>
             </div>
-            <div className={styles.becomePartner}>
+            <div className={styles.become}>
               <p>
                 Join us in shaping the future of work by becoming a partner
                 today!
               </p>
-              <button>Send partnership request</button>
+              <Button link="/contact">Send partnership request</Button>
             </div>
           </div>
         </div>
         <div className="col-12 col-xl-5">
           <div className={styles.logos}>
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/airbnb-2-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/microsoft-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/visa-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/spotify-1-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/airbnb-2-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-
-            <div
-              style={{
-                position: "relative",
-                margin: "1rem",
-                width: `${100}px`,
-                height: `${100}px`,
-              }}
-            >
-              <Image
-                src="/images/microsoft-logo-svgrepo-com.svg"
-                alt="Logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-
-          
-
-           
+            {imageSources.map((src, index) => (
+              <div
+                key={index}
+                className={styles.logoContainer}
+              >
+                <Image
+                  src={src}
+                  alt="Logo"
+                  fill
+                  className={styles.logo}
+                  style={{ animationDelay: `${0.1 + 0.2 * index}s` }} // Set delay dynamically
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
-   
     </main>
   );
 }

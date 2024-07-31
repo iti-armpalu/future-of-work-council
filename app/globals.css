@@ -126,23 +126,9 @@ img {
 }
 
 button {
-  color: #fff;
-  background-color: #ef6e4e;
-  text-transform: uppercase;
   border: none;
   outline: none;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.86rem;
-  line-height: 0.86rem;
-  padding: 1rem;
-  min-width: fit-content;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  background-color: transparent;
 }
 
 button:active,

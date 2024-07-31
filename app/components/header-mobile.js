@@ -7,6 +7,7 @@ import styles from "./header-mobile.module.css";
 import { usePathname } from "next/navigation";
 import { HeaderMobileMenu } from "./header-mobile-menu";
 import useLockBodyScroll from "./ui/use-lock-body-scroll";
+import { Button } from "./ui/button";
 
 const itemVariants = {
   open: {
@@ -31,8 +32,26 @@ export function HeaderMobile() {
           The Future of Work Council
         </Link>
       </div>
+      <nav>
+      <Button onClick={() => setIsOpen(!isOpen)} variant="secondary" isMenuButton>
+        Menu
+        {/* <div className={`${styles.menuIcon} ${isOpen ? styles.open : styles.closed}`}>
+          <svg width="15" height="15" viewBox="0 0 20 20">
+            <path d="M0 7 L 20 7 L 10 16" />
+          </svg>
+        </div> */}
+      </Button>
 
-      <motion.nav
+      <HeaderMobileMenu isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+    </nav>
+
+
+
+      {/* <Button variant="secondary" isMenuButton>
+          Menu
+        </Button> */}
+
+      {/* <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
         className={styles.menu}
@@ -56,11 +75,12 @@ export function HeaderMobile() {
             </svg>
           </motion.div>
         </motion.button>
+       
         <HeaderMobileMenu 
           isOpen={isOpen} 
           onClick={() => setIsOpen(!isOpen)} 
         />
-      </motion.nav>
+      </motion.nav> */}
     </header>
   );
 }

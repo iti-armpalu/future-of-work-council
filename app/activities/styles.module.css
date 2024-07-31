@@ -3,45 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* padding: 4rem 6rem 0 6rem; */
-  padding: 6rem;
+  padding: 4rem 6rem 0 6rem;
+  /* padding: 6rem; */
   margin-left: -15%;
   min-height: 100vh;
   line-height: 1.15;
 }
-
-/* Description Styles */
-.description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  margin: 2.75rem 0;
-}
-
-.description h1 {
-  font-weight: 700;
-  margin-right: 1rem;
-  margin-bottom: 0;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards 0.1s;
-}
-
-.description p {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-}
-
-.description p:not(:last-child) {
-  margin-bottom: 1rem !important;
-}
-
-
 
 .section {
   display: inherit;
@@ -50,14 +17,11 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-
 }
 
 .section > div {
   position: relative;
 }
-
-
 
 .activities {
   display: flex;
@@ -65,20 +29,21 @@
   flex-wrap: wrap;
 }
 
-.activity {
+.card {
   position: relative;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   width: 31%;
-  background-color: rgba(124, 41, 41, .2);
+  background-color: rgba(124, 41, 41, 0.2);
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
+  animation: fadeInUp 0.4s forwards;
 }
 
-.activity h6, .activity p {
+.card h6,
+.card p {
   position: relative;
   z-index: 1;
   font-size: 1rem;
@@ -87,78 +52,14 @@
   animation: fadeInUp 0.5s forwards;
 }
 
-.activity h6 {
+.card h6 {
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #EF6E4E;
-  animation-delay: 0.8s; /* Adjust delay */
+  color: #ef6e4e;
 }
 
-.activity p {
-  animation-delay: 0.9s; /* Adjust delay */
-}
-
-.activity p:not(:last-child) {
+.card p:not(:last-child) {
   margin-bottom: 1rem !important;
-}
-
-
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
 }
 
 /* Keyframes */
@@ -173,36 +74,6 @@
   }
 }
 
-/* Animation Delays */
-.activity {
-  animation-delay: calc(0.1s * (var(--index, 1) + 1));
-}
-
-/* Animation Delays
-.activity:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.activity:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.activity:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.activity:nth-child(4) {
-  animation-delay: 0.5s;
-}
-
-.activity:nth-child(5) {
-  animation-delay: 0.6s;
-}
-
-.activity:nth-child(6) {
-  animation-delay: 0.7s;
-} */
-
 /* Responsive Styles */
 @media (max-width: 1199px) {
   .main {
@@ -210,11 +81,7 @@
     margin-left: -10%;
   }
 
-  .description h1 {
-    font-size: 2.2rem;
-  }
-
-  .activity {
+  .card {
     width: 48%;
   }
 }
@@ -224,20 +91,6 @@
     padding: 4rem;
     margin-left: -5%;
   }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-
-
-
 }
 
 /* Mobile */
@@ -247,13 +100,10 @@
     min-height: calc(100vh - 96px);
     margin-left: 0;
   }
-
-
 }
 
 @media (max-width: 576px) {
-
-  .activity {
+  .card {
     width: 100%;
   }
 }
