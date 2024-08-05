@@ -5,7 +5,7 @@
   padding: 1rem;
 }
 
-.form p {
+.form .title, .form .fields p {
   margin-bottom: 2rem !important;
   opacity: 0;
   transform: translateY(20px);
@@ -14,23 +14,23 @@
   }
 }
 
-.form p:nth-child(5) {
+.form .title {
   animation-delay: 0.2s;
 }
 
-.form p:nth-child(6) {
+.form .fields p:nth-child(1) {
   animation-delay: 0.3s;
 }
 
-.form p:nth-child(7) {
+.form .fields p:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.form p:nth-child(8) {
+.form .fields p:nth-child(3) {
   animation-delay: 0.5s;
 }
 
-.form p:nth-child(9) {
+.form .fields p:nth-child(4) {
   animation-delay: 0.6s;
 }
 

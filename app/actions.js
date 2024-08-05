@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -24,7 +25,24 @@ const formSchema = z.object({
     }),
 });
 
+// Function to send data to AWS API
+async function sendContactData(data) {
+  const response = await fetch('https://93y1jugqjk.execute-api.us-east-1.amazonaws.com/contact-form', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.message || 'Something went wrong!');
+  }
+
+  return result;
+}
 
 export default async function submitForm(prevSate, formData) {
   const result = formSchema.safeParse({
@@ -40,6 +58,10 @@ export default async function submitForm(prevSate, formData) {
       errors: result.error.flatten().fieldErrors,
     };
   } else {
+
+
+    const { name, email, subject, message } = result.data;
+
     // Log the validated data
     console.log(result.data);
 

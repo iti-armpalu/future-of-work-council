@@ -55,16 +55,26 @@
 }
 
 /* Profile Text */
-.profile h6,
+.profile a,
 .profile p {
   position: relative;
   z-index: 1;
   font-size: 1rem;
 }
 
-.profile h6 {
+.profile a {
+  color: #fff;
+  width: fit-content;
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #ef6e4e;
+  animation-delay: 0.5s;
+  transition: color 0.3s ease;
+}
+
+.profile a:hover {
+  color: #ef6e4e;
 }
 
 .profile p {

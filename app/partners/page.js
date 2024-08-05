@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { PageTitle } from "../components/page-title";
 import { Button } from "../components/ui/button";
-import { FormTest } from "../components/form-test";
 
 export default function Page() {
   const title = "Partners";
@@ -78,7 +77,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <FormTest />
     </main>
   );
 }

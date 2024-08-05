@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import { PageTitle } from "../components/page-title";
+import Link from "next/link";
 
 export default function Page() {
   const title = "About the Future of Work Council";
@@ -14,16 +15,19 @@ export default function Page() {
   const founders = [
     {
       name: "Roy Armale",
+      linkHref: "www.linked.com",
       title: "SVP Products and Platforms at WPP",
       image: "/images/Roy-Armale.jpeg",
     },
     {
       name: "Roy Armale",
+      linkHref: "www.linked.com",
       title: "SVP Products and Platforms at WPP",
       image: "/images/Roy-Armale.jpeg",
     },
     {
       name: "Roy Armale",
+      linkHref: "www.linked.com",
       title: "SVP Products and Platforms at WPP",
       image: "/images/Roy-Armale.jpeg",
     },
@@ -39,7 +43,11 @@ export default function Page() {
         <div className={`col-12 col-md-11 ${styles.profiles}`}>
           {founders.map((founder, index) => (
             <div key={index} className={styles.profile}>
-              <h6>{founder.name}</h6>
+              <Link href={founder.linkHref} prefetch={false} legacyBehavior>
+                <a target="_blank" rel="noreferrer">
+                  {founder.name}
+                </a>
+              </Link>
               <p>{founder.title}</p>
               <Image
                 src={founder.image}
