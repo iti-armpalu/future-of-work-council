@@ -35,15 +35,10 @@ export default function Page() {
 
   const events = [
     {
-      title: "01 May 2024: The Future of Work Council Event",
+      title: "New event coming soon",
       linkText: "Register your interest",
       linkHref: "/",
-    },
-    {
-      title: "01 September 2024: The Future of Work Council Event",
-      linkText: "Register your interest",
-      linkHref: "/",
-    },
+    }
   ];
 
   return (

@@ -33,12 +33,6 @@ export function Button(props) {
   }
 
   return (
-    // <button 
-    //   className={`${styles.btn} ${styles[btnClass]}`}
-    //   onClick={onClick}>
-    //     {children}
-    // </button>
-
     <button 
       className={`${styles.btn} ${styles[btnClass]}`}
       onClick={handleClick}>
