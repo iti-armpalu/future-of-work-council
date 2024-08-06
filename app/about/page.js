@@ -15,21 +15,21 @@ export default function Page() {
   const founders = [
     {
       name: "Roy Armale",
-      linkHref: "www.linked.com",
+      linkHref: "www.linkedin.com",
       title: "SVP Products and Platforms at WPP",
       image: "/images/Roy-Armale.jpeg",
     },
     {
-      name: "Roy Armale",
-      linkHref: "www.linked.com",
-      title: "SVP Products and Platforms at WPP",
-      image: "/images/Roy-Armale.jpeg",
+      name: "Lisa Smith",
+      linkHref: "www.linkedin.com",
+      title: "Chief AI Officer at Pilv",
+      image: "/images/Lisa-Smith.jpg",
     },
     {
-      name: "Roy Armale",
-      linkHref: "www.linked.com",
-      title: "SVP Products and Platforms at WPP",
-      image: "/images/Roy-Armale.jpeg",
+      name: "Shaun Sheep",
+      linkHref: "www.linkedin.com",
+      title: "AI Marketing Strategist at Dolphin",
+      image: "/images/Shaun-Sheep.jpg",
     },
   ];
 

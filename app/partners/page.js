@@ -7,12 +7,12 @@ export default function Page() {
   const title = "Partners";
 
   const imageSources = [
-    "/images/airbnb-2-logo-svgrepo-com.svg",
-    "/images/microsoft-logo-svgrepo-com.svg",
-    "/images/visa-logo-svgrepo-com.svg",
-    "/images/spotify-1-logo-svgrepo-com.svg",
-    "/images/airbnb-2-logo-svgrepo-com.svg",
-    "/images/microsoft-logo-svgrepo-com.svg",
+    "/images/stari.svg",
+    "/images/asgardia.svg",
+    "/images/light-AI.svg",
+    "/images/radiyal.svg",
+    "/images/atica.svg",
+    "/images/velocity.svg",
   ];
 
   return (

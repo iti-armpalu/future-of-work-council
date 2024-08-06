@@ -79,6 +79,7 @@
 
 .profile p {
   margin-bottom: 1rem !important;
+  min-height: 2.3rem;;
 }
 
 /* Image Styles */

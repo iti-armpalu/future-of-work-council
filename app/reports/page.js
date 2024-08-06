@@ -37,7 +37,7 @@ export default function Page() {
     {
       title: "New event coming soon",
       linkText: "Register your interest",
-      linkHref: "/",
+      linkHref: "/contact",
     }
   ];
 

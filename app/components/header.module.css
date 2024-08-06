@@ -20,13 +20,12 @@
 .logo {
   font-size: 1.2rem;
   font-weight: 700;
-  font-style: normal;
+  line-height: 1.15;
   width: 80%;
   margin-bottom: 4rem;
 }
 
 .logo a {
-  line-height: 1.15;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s forwards 0.1s;
@@ -89,4 +88,3 @@
     transform: translateY(0);
   }
 }
-
